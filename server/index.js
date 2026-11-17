@@ -16,7 +16,13 @@ const SERVER_DIR = path.dirname(fileURLToPath(import.meta.url));
 const LOCAL_USERS_FILE = path.join(SERVER_DIR, "users.json");
 const DATASET_FILE = path.join(SERVER_DIR, "uploaded-dataset.json");
 const JWT_SECRET = process.env.JWT_SECRET || "local-demo-secret-change-before-production";
-app.use(cors({ origin: ["http://localhost:5173", "http://127.0.0.1:5173"] }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+    "https://nitin15122006.github.io"
+  ]
+}));
 app.use(express.json({ limit: "12mb" }));
 
 let localProducts = [...demoProducts];
