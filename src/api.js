@@ -1,4 +1,4 @@
-const API_BASE = "/api";
+const API_BASE = "https://glassadmin-dsa-project.onrender.com/api";
 export function getToken() { return localStorage.getItem("glassadmin_token"); }
 export function saveSession(data) {
   localStorage.setItem("glassadmin_token", data.token);
