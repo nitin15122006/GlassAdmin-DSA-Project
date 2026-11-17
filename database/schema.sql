@@ -1,0 +1,45 @@
+CREATE DATABASE IF NOT EXISTS ecommerce_forecasting;
+USE ecommerce_forecasting;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(120) NOT NULL,
+  email VARCHAR(190) NOT NULL UNIQUE,
+  password_hash VARCHAR(255) NOT NULL,
+  role ENUM('admin','analyst') DEFAULT 'admin',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS products (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(180) NOT NULL,
+  category VARCHAR(100) NOT NULL,
+  price DECIMAL(10,2) NOT NULL DEFAULT 0,
+  stock INT NOT NULL DEFAULT 0,
+  units_sold INT NOT NULL DEFAULT 0,
+  status VARCHAR(30) DEFAULT 'Active',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS orders (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  order_code VARCHAR(40) NOT NULL UNIQUE,
+  customer_name VARCHAR(150) NOT NULL,
+  customer_email VARCHAR(190),
+  order_date DATE NOT NULL,
+  amount DECIMAL(10,2) NOT NULL DEFAULT 0,
+  status VARCHAR(30) DEFAULT 'Processing',
+  payment_method VARCHAR(60),
+  region VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS customers (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  customer_code VARCHAR(40) NOT NULL UNIQUE,
+  name VARCHAR(150) NOT NULL,
+  email VARCHAR(190),
+  segment VARCHAR(60) DEFAULT 'Returning',
+  orders_count INT DEFAULT 0,
+  lifetime_value DECIMAL(10,2) DEFAULT 0,
+  region VARCHAR(100)
+);

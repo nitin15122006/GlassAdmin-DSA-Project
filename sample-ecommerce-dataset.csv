@@ -1,0 +1,13 @@
+Order Date,Order ID,Customer Name,Product,Category,Quantity,Price,Sales,Region,Status
+2026-01-05,ORD-1001,Aarav Shah,Wireless Mouse,Electronics,2,500,1000,West,Delivered
+2026-01-18,ORD-1002,Diya Patil,Running Shoes,Fashion,1,2400,2400,West,Delivered
+2026-02-02,ORD-1003,Rohan Kulkarni,Water Bottle,Home & Living,3,350,1050,South,Shipped
+2026-02-16,ORD-1004,Meera Joshi,Wireless Mouse,Electronics,1,500,500,North,Delivered
+2026-03-07,ORD-1005,Aarav Shah,Running Shoes,Fashion,2,2400,4800,West,Delivered
+2026-03-22,ORD-1006,Sana Khan,Desk Lamp,Home & Living,2,850,1700,South,Delivered
+2026-04-04,ORD-1007,Diya Patil,Wireless Mouse,Electronics,1,500,500,East,Delivered
+2026-04-19,ORD-1008,Vivaan Deshmukh,Running Shoes,Fashion,1,2400,2400,North,Shipped
+2026-05-03,ORD-1009,Rohan Kulkarni,Desk Lamp,Home & Living,1,850,850,South,Delivered
+2026-05-24,ORD-1010,Sana Khan,Wireless Mouse,Electronics,3,500,1500,West,Delivered
+2026-06-11,ORD-1011,Meera Joshi,Running Shoes,Fashion,2,2400,4800,East,Delivered
+2026-06-26,ORD-1012,Vivaan Deshmukh,Water Bottle,Home & Living,4,350,1400,North,Delivered
